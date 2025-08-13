@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF--8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nesoberi</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="./assets/css/tailwind.js"></script>
+
+    <!-- Google Fonts (Poppins) -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    /> -->
+
+    <script src="./assets/js/config_tailwind.js"></script>
+
+    <link rel="">
+
+    <style>
+      .subtle-pattern {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%2327272a' fill-opacity='0.2'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+    </style>
+
+    
+  </head>
+  <body class="bg-mono-dark text-mono-text font-sans leading-relaxed">
+    <!-- Header (Navbar) -->
+    <header
+      id="main-header"
+      class="fixed top-0 left-0 w-full z-50 transition-transform duration-300 ease-in-out -translate-y-full"
+    >
+      <div
+        class="container mx-auto px-4 flex justify-between items-center py-4 bg-mono-dark/70 backdrop-blur-md shadow-lg shadow-black/20 rounded-b-2xl border-b border-mono-border/30"
+      >
+        <a
+          href="#"
+          class="text-xl font-bold bg-gradient-to-r from-mono-accent to-gray-400 text-transparent bg-clip-text"
+          data-lang-id="Nesoberi CORE"
+          data-lang-en="Nesoberi CORE"
+          >Nesoberi</a
+        >
+
+        <nav class="hidden md:flex items-center space-x-2">
+          <ul class="flex items-center space-x-2 text-sm">
+            <li>
+              <a
+                href="#apa-itu"
+                class="px-3 py-2 text-mono-text hover:bg-mono-surface/50 rounded-md transition-colors"
+                data-lang-id="Manifesto"
+                data-lang-en="Manifesto"
+                >Manifesto</a
+              >
+            </li>
+            <li>
+              <a
+                href="#sejarah"
+                class="px-3 py-2 text-mono-text hover:bg-mono-surface/50 rounded-md transition-colors"
+                data-lang-id="Linimasa"
+                data-lang-en="Timeline"
+                >Linimasa</a
+              >
+            </li>
+            <li>
+              <a
+                href="#ukuran"
+                class="px-3 py-2 text-mono-text hover:bg-mono-surface/50 rounded-md transition-colors"
+                data-lang-id="Skala"
+                data-lang-en="Scale"
+                >Skala</a
+              >
+            </li>
+            <li>
+              <a
+                href="#identifikasi"
+                class="px-3 py-2 text-mono-text hover:bg-mono-surface/50 rounded-md transition-colors"
+                data-lang-id="Identifikasi"
+                data-lang-en="Identification"
+                >Identifikasi</a
+              >
+            </li>
+            <li>
+              <a
+                href="#faq"
+                class="px-3 py-2 text-mono-text hover:bg-mono-surface/50 rounded-md transition-colors"
+                >FAQ</a
+              >
+            </li>
+          </ul>
+          <button
+            id="lang-switcher-desktop"
+            class="lang-switcher ml-4 bg-mono-accent hover:bg-gray-200 text-black px-4 py-2 text-sm font-semibold rounded-full transition-all duration-300 transform hover:scale-105"
+            data-lang-id="EN"
+            data-lang-en="ID"
+          >
+            EN
+          </button>
+        </nav>
+
+        <button
+          id="hamburger-button"
+          class="md:hidden p-2 text-mono-accent z-50"
+        >
+          <svg
+            id="hamburger-open-icon"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+          <svg
+            id="hamburger-close-icon"
+            class="h-6 w-6 hidden"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Menu Mobile -->
+    <div
+      id="mobile-menu"
+      class="fixed top-0 right-0 h-screen w-full bg-mono-dark/95 backdrop-blur-lg flex items-center justify-center transform translate-x-full transition-transform duration-500 ease-in-out z-40"
+    >
+      <nav class="flex flex-col items-center space-y-8">
+        <a
+          href="#apa-itu"
+          class="mobile-nav-link text-2xl font-bold"
+          data-lang-id="Manifesto"
+          data-lang-en="Manifesto"
+          >Manifesto</a
+        >
+        <a
+          href="#sejarah"
+          class="mobile-nav-link text-2xl font-bold"
+          data-lang-id="Linimasa"
+          data-lang-en="Timeline"
+          >Linimasa</a
+        >
+        <a
+          href="#ukuran"
+          class="mobile-nav-link text-2xl font-bold"
+          data-lang-id="Skala"
+          data-lang-en="Scale"
+          >Skala</a
+        >
+        <a
+          href="#identifikasi"
+          class="mobile-nav-link text-2xl font-bold"
+          data-lang-id="Identifikasi"
+          data-lang-en="Identification"
+          >Identifikasi</a
+        >
+        <a
+          href="#akuisisi"
+          class="mobile-nav-link text-2xl font-bold"
+          data-lang-id="Akuisisi"
+          data-lang-en="Acquisition"
+          >Akuisisi</a
+        >
+        <a
+          href="#galeri"
+          class="mobile-nav-link text-2xl font-bold"
+          data-lang-id="Galeri"
+          data-lang-en="Gallery"
+          >Galeri</a
+        >
+        <a href="#faq" class="mobile-nav-link text-2xl font-bold">FAQ</a>
+        <button
+          id="lang-switcher-mobile"
+          class="lang-switcher mt-8 bg-mono-accent text-black px-8 py-3 rounded-full font-semibold"
+          data-lang-id="EN"
+          data-lang-en="ID"
+        >
+          EN
+        </button>
+      </nav>
+    </div>
+
+    <!-- Jumbotron -->
+    <section
+      id="hero"
+      class="relative h-screen flex items-center justify-center text-center text-white subtle-pattern overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-mono-dark via-transparent to-transparent"
+      ></div>
+      <div class="relative z-10 p-4 max-w-4xl drop-shadow-xl">
+        <h1
+          class="text-5xl md:text-7xl font-extrabold mb-4 text-mono-accent leading-tight"
+        >
+          Nesoberi CORE
+        </h1>
+        <p
+          class="text-lg md:text-xl font-light text-mono-text max-w-2xl mx-auto mb-8"
+          data-lang-id="Antarmuka data untuk koleksi Nesoberi. Akses asal-usul, evolusi, dan pesona abadi."
+          data-lang-en="Data interface for the Nesoberi collective. Accessing origin, evolution, and timeless charm."
+        >
+          Antarmuka data untuk koleksi Nesoberi. Akses asal-usul, evolusi, dan
+          pesona abadi.
+        </p>
+        <a
+          href="#apa-itu"
+          class="bg-mono-accent hover:bg-gray-200 text-black px-8 py-3 rounded-full font-bold transition-all duration-300 transform hover:scale-105 shadow-lg shadow-white/10 inline-block"
+          data-lang-id="Mulai Ekstraksi"
+          data-lang-en="Begin Extraction"
+          >Mulai Ekstraksi</a
+        >
+      </div>
+      <div
+        class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-10"
+      >
+        <svg
+          class="w-8 h-8 text-mono-accent"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 9l-7 7-7-7"
+          ></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Konten Utama -->
+    <div class="bg-mono-dark">
+      <main class="container mx-auto px-4 py-16 md:py-24 space-y-24">
+        <section
+          id="apa-itu"
+          class="content-section opacity-0 max-w-3xl mx-auto text-center"
+        >
+          <h2
+            class="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-mono-accent to-gray-400 text-transparent bg-clip-text"
+            data-lang-id="Analisis Entitas: Apa itu Nesoberi?"
+            data-lang-en="Entity Analysis: What is a Nesoberi?"
+          >
+            Analisis Entitas: Apa itu Nesoberi?
+          </h2>
+          <p
+            class="text-mono-text"
+            data-lang-id="Nesoberi (寝そべりぬいぐるみ) adalah bentuk kehidupan artifisial koleksi dari SEGA, dicirikan oleh posisi rebahan (prone position), kepala besar, dan antarmuka visual yang sederhana. Mereka berfungsi sebagai artefak koneksi antara individu dan dunia naratif favorit mereka."
+            data-lang-en="Nesoberi (寝そべりぬいぐるみ) is a collectible artificial lifeform from SEGA, characterized by its prone position, large head, and simple visual interface. They serve as connection artifacts between individuals and their favorite narrative worlds."
+          >
+            Nesoberi (寝そべりぬいぐるみ) adalah bentuk kehidupan artifisial
+            koleksi dari SEGA, dicirikan oleh posisi rebahan (prone position),
+            kepala besar, dan antarmuka visual yang sederhana. Mereka berfungsi
+            sebagai artefak koneksi antara individu dan dunia naratif favorit
+            mereka.
+          </p>
+        </section>
+
+        <!-- Timeline -->
+        <section id="sejarah" class="content-section opacity-0">
+          <h2
+            class="text-3xl md:text-4xl font-bold mb-16 text-center bg-gradient-to-r from-mono-accent to-gray-400 text-transparent bg-clip-text"
+            data-lang-id="Log Transmisi: Evolusi"
+            data-lang-en="Transmission Log: Evolution"
+          >
+            Log Transmisi: Evolusi
+          </h2>
+          <div class="relative max-w-3xl mx-auto py-4">
+            <div
+              class="absolute top-0 h-full w-0.5 bg-mono-border/40 left-1/2 -translate-x-1/2"
+            ></div>
+            <div class="mb-12 flex items-center w-full">
+              <div class="hidden md:block w-1/2"></div>
+              <div
+                class="w-8 h-8 z-10 absolute left-1/2 -translate-x-1/2 bg-mono-dark border-2 border-mono-accent rounded-full"
+              ></div>
+              <div
+                class="bg-mono-surface/70 backdrop-blur-sm p-4 rounded-xl border border-mono-border/30 w-full md:w-1/2 md:ml-8"
+              >
+                <h3 class="font-bold text-xl mb-1 text-mono-accent">
+                  Iterasi 2015
+                </h3>
+                <p
+                  class="text-sm text-mono-text"
+                  data-lang-id="Generasi awal muncul sebagai item langka dari terminal SEGA. Segera memicu resonansi tinggi di komunitas Love Live!. Ini adalah titik awal dari fenomena Nesoberi."
+                  data-lang-en="The initial generation appears as rare items from SEGA terminals. Immediately triggers high resonance within the Love Live! community. This marks the genesis of the Nesoberi phenomenon."
+                >
+                  Generasi awal muncul sebagai item langka dari terminal SEGA.
+                  Segera memicu resonansi tinggi di komunitas Love Live!. Ini
+                  adalah titik awal dari fenomena Nesoberi.
+                </p>
+              </div>
+            </div>
+            <div class="mb-12 flex flex-row-reverse items-center w-full">
+              <div class="hidden md:block w-1/2"></div>
+              <div
+                class="w-8 h-8 z-10 absolute left-1/2 -translate-x-1/2 bg-mono-dark border-2 border-mono-accent rounded-full"
+              ></div>
+              <div
+                class="bg-mono-surface/70 backdrop-blur-sm p-4 rounded-xl border border-mono-border/30 w-full md:w-1/2 md:mr-8"
+              >
+                <h3
+                  class="font-bold text-xl mb-1 text-mono-accent"
+                  data-lang-id="Iterasi 2016 - Kini"
+                  data-lang-en="Iteration 2016 - Present"
+                >
+                  Iterasi 2016 - Kini
+                </h3>
+                <p
+                  class="text-sm text-mono-text"
+                  data-lang-id="Ekspansi Protokol: Nesoberi diadaptasi ke berbagai waralaba, menyebar luas di seluruh jaringan kolektor global."
+                  data-lang-en="Protocol Expansion: Nesoberi are adapted for various franchises, spreading widely across the global collector network."
+                >
+                  Ekspansi Protokol: Nesoberi diadaptasi ke berbagai waralaba,
+                  menyebar luas di seluruh jaringan kolektor global.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Character Select Section -->
+        <section id="ukuran" class="content-section opacity-0">
+          <h2
+            class="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-mono-accent to-gray-400 text-transparent bg-clip-text"
+            data-lang-id="Seleksi Unit: Skala"
+            data-lang-en="Unit Selection: Scale"
+          >
+            Seleksi Unit: Skala
+          </h2>
+          <div
+            class="flex flex-col md:flex-row min-h-[70vh] max-w-6xl mx-auto bg-mono-surface/50 backdrop-blur-sm border border-mono-border/20 rounded-2xl shadow-2xl shadow-black/30"
+          >
+            <!-- Preview Panel -->
+            <div
+              class="w-full md:w-1/2 flex flex-col items-center justify-center p-8 bg-black/30 rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none"
+            >
+              <img
+                id="preview-image"
+                src=""
+                alt=""
+                class="max-w-xs md:max-w-sm w-full transition-all duration-300 ease-in-out"
+              />
+              <div class="text-center mt-6">
+                <h3
+                  id="preview-title"
+                  class="text-2xl font-bold text-mono-accent"
+                ></h3>
+                <p
+                  id="preview-description"
+                  class="text-mono-text mt-2 max-w-xs"
+                ></p>
+              </div>
+            </div>
+            <!-- Selection Panel -->
+            <div id="selection-panel" class="w-full md:w-1/2 p-6 md:p-8">
+              <!-- Kartu akan dibuat oleh JS -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Kategori & Seri -->
+        <section id="kategori" class="content-section opacity-0">
+          <h2
+            class="text-3xl md:text-4xl font-bold mb-8 text-center bg-gradient-to-r from-mono-accent to-gray-400 text-transparent bg-clip-text"
+            data-lang-id="Klasifikasi: Kategori & Seri"
+            data-lang-en="Classification: Categories & Series"
+          >
+            Klasifikasi: Kategori & Seri
+          </h2>
+          <div
+            class="max-w-4xl mx-auto bg-mono-surface/50 backdrop-blur-sm p-6 rounded-lg border border-mono-border/30"
+          >
+            <p
+              class="text-center mb-6 text-mono-text"
+              data-lang-id="Nesoberi telah diproduksi untuk berbagai seri anime, game, dan Vocaloid. Berikut adalah beberapa waralaba yang paling menonjol:"
+              data-lang-en="Nesoberi have been produced for numerous anime, game, and Vocaloid series. Below are some of the most prominent franchises:"
+            >
+              Nesoberi telah diproduksi untuk berbagai seri anime, game, dan
+              Vocaloid. Berikut adalah beberapa waralaba yang paling menonjol:
+            </p>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left border-collapse">
+                <thead>
+                  <tr class="border-b border-mono-border">
+                    <th
+                      class="p-3 font-semibold text-mono-accent"
+                      data-lang-id="Waralaba"
+                      data-lang-en="Franchise"
+                    >
+                      Waralaba
+                    </th>
+                    <th
+                      class="p-3 font-semibold text-mono-accent"
+                      data-lang-id="Catatan"
+                      data-lang-en="Notes"
+                    >
+                      Catatan
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-b border-mono-border/50">
+                    <td class="p-3">
+                      Love Live! (School Idol Project, Sunshine!!, etc.)
+                    </td>
+                    <td
+                      class="p-3"
+                      data-lang-id="Seri perintis yang mempopulerkan Nesoberi."
+                      data-lang-en="The pioneering series that popularized Nesoberi."
+                    >
+                      Seri perintis yang mempopulerkan Nesoberi.
+                    </td>
+                  </tr>
+                  <tr class="border-b border-mono-border/50">
+                    <td class="p-3">Vocaloid (Hatsune Miku, etc.)</td>
+                    <td
+                      class="p-3"
+                      data-lang-id="Sangat populer dengan berbagai versi kostum."
+                      data-lang-en="Extremely popular with numerous costume variations."
+                    >
+                      Sangat populer dengan berbagai versi kostum.
+                    </td>
+                  </tr>
+                  <tr class="border-b border-mono-border/50">
+                    <td class="p-3">
+                      Re:Zero - Starting Life in Another World
+                    </td>
+                    <td
+                      class="p-3"
+                      data-lang-id="Karakter seperti Rem dan Emilia banyak dicari."
+                      data-lang-en="Characters like Rem and Emilia are highly sought after."
+                    >
+                      Karakter seperti Rem dan Emilia banyak dicari.
+                    </td>
+                  </tr>
+                  <tr class="border-b border-mono-border/50">
+                    <td class="p-3">Jujutsu Kaisen</td>
+                    <td
+                      class="p-3"
+                      data-lang-id="Adaptasi dari seri modern yang populer."
+                      data-lang-en="Adaptations from a popular modern series."
+                    >
+                      Adaptasi dari seri modern yang populer.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="p-3">...dan banyak lagi</td>
+                    <td
+                      class="p-3"
+                      data-lang-id="Termasuk Fate Series, Touhou Project, dll."
+                      data-lang-en="Includes Fate Series, Touhou Project, etc."
+                    >
+                      Termasuk Fate Series, Touhou Project, dll.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- Identifikasi Unit -->
+        <section id="identifikasi" class="content-section opacity-0">
+          <h2
+            class="text-3xl md:text-4xl font-bold mb-8 text-center bg-gradient-to-r from-mono-accent to-gray-400 text-transparent bg-clip-text"
+            data-lang-id="Identifikasi Unit: Official vs. Bootleg"
+            data-lang-en="Unit Identification: Official vs. Bootleg"
+          >
+            Identifikasi Unit: Official vs. Bootleg
+          </h2>
+          <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+            <!-- Official -->
+            <div
+              class="bg-mono-surface/50 p-6 rounded-lg border-2 border-green-400/50"
+            >
+              <h3
+                class="text-2xl font-bold text-green-400 mb-4"
+                data-lang-id="Ciri-ciri Official"
+                data-lang-en="Official Traits"
+              >
+                Ciri-ciri Official
+              </h3>
+              <img
+                src="https://placehold.co/600x400/18181b/22c55e?text=Contoh+Tag+Asli"
+                alt="Official Tag"
+                class="rounded-md mb-4 w-full"
+              />
+              <ul class="space-y-3 list-disc list-inside text-mono-text">
+                <li
+                  data-lang-id="<strong class='text-mono-accent'>Tag Kain & Kertas:</strong> Jelas, cetakan tajam, logo SEGA dan hak cipta seri tercetak benar."
+                  data-lang-en="<strong class='text-mono-accent'>Fabric & Paper Tags:</strong> Clear, crisp printing, correct SEGA and series copyright logos."
+                >
+                  <strong class="text-mono-accent">Tag Kain & Kertas:</strong>
+                  Jelas, cetakan tajam, logo SEGA dan hak cipta seri tercetak
+                  benar.
+                </li>
+                <li
+                  data-lang-id="<strong class='text-mono-accent'>Bordiran Wajah:</strong> Rapi, simetris, dan padat. Benang tidak keluar-keluar."
+                  data-lang-en="<strong class='text-mono-accent'>Face Embroidery:</strong> Neat, symmetrical, and dense. No loose threads."
+                >
+                  <strong class="text-mono-accent">Bordiran Wajah:</strong>
+                  Rapi, simetris, dan padat. Benang tidak keluar-keluar.
+                </li>
+                <li
+                  data-lang-id="<strong class='text-mono-accent'>Proporsi:</strong> Bentuk kepala dan badan seimbang sesuai desain karakter."
+                  data-lang-en="<strong class='text-mono-accent'>Proportions:</strong> Head and body shape are balanced according to the character design."
+                >
+                  <strong class="text-mono-accent">Proporsi:</strong> Bentuk
+                  kepala dan badan seimbang sesuai desain karakter.
+                </li>
+                <li
+                  data-lang-id="<strong class='text-mono-accent'>Material:</strong> Kain terasa lembut dan halus (biasanya Mochi/Velboa), isian padat tapi empuk."
+                  data-lang-en="<strong class='text-mono-accent'>Material:</strong> Fabric feels soft and smooth (usually Mochi/Velboa), stuffing is dense but plush."
+                >
+                  <strong class="text-mono-accent">Material:</strong> Kain
+                  terasa lembut dan halus (biasanya Mochi/Velboa), isian padat
+                  tapi empuk.
+                </li>
+              </ul>
+            </div>
+            <!-- Bootleg -->
+            <div
+              class="bg-mono-surface/50 p-6 rounded-lg border-2 border-red-500/50"
+            >
+              <h3
+                class="text-2xl font-bold text-red-500 mb-4"
+                data-lang-id="Ciri-ciri Bootleg"
+                data-lang-en="Bootleg Traits"
+              >
+                Ciri-ciri Bootleg
+              </h3>
+              <img
+                src="https://placehold.co/600x400/18181b/ef4444?text=Contoh+Tag+Palsu"
+                alt="Bootleg Tag"
+                class="rounded-md mb-4 w-full"
+              />
+              <ul class="space-y-3 list-disc list-inside text-mono-text">
+                <li
+                  data-lang-id="<strong class='text-mono-accent'>Tag Kain & Kertas:</strong> Cetakan buram, salah eja, atau bahkan tidak ada sama sekali."
+                  data-lang-en="<strong class='text-mono-accent'>Fabric & Paper Tags:</strong> Blurry printing, misspellings, or completely absent."
+                >
+                  <strong class="text-mono-accent">Tag Kain & Kertas:</strong>
+                  Cetakan buram, salah eja, atau bahkan tidak ada sama sekali.
+                </li>
+                <li
+                  data-lang-id="<strong class='text-mono-accent'>Bordiran Wajah:</strong> Tidak rapi, asimetris, tipis, dan sering ada benang longgar."
+                  data-lang-en="<strong class='text-mono-accent'>Face Embroidery:</strong> Messy, asymmetrical, thin, and often has loose threads."
+                >
+                  <strong class="text-mono-accent">Bordiran Wajah:</strong>
+                  Tidak rapi, asimetris, tipis, dan sering ada benang longgar.
+                </li>
+                <li
+                  data-lang-id="<strong class='text-mono-accent'>Proporsi:</strong> Seringkali aneh, kepala terlalu gepeng atau badan terlalu panjang."
+                  data-lang-en="<strong class='text-mono-accent'>Proportions:</strong> Often strange, with a flattened head or an overly long body."
+                >
+                  <strong class="text-mono-accent">Proporsi:</strong> Seringkali
+                  aneh, kepala terlalu gepeng atau badan terlalu panjang.
+                </li>
+                <li
+                  data-lang-id="<strong class='text-mono-accent'>Material:</strong> Kain terasa lebih kasar, isian kurang padat atau menggumpal."
+                  data-lang-en="<strong class='text-mono-accent'>Material:</strong> Fabric feels rougher, stuffing is less dense or lumpy."
+                >
+                  <strong class="text-mono-accent">Material:</strong> Kain
+                  terasa lebih kasar, isian kurang padat atau menggumpal.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Material & Perawatan (Versi Interaktif) -->
+        <section id="material" class="content-section opacity-0">
+          <h2
+            class="text-3xl md:text-4xl font-bold mb-8 text-center bg-gradient-to-r from-mono-accent to-gray-400 text-transparent bg-clip-text"
+            data-lang-id="Spesifikasi & Perawatan"
+            data-lang-en="Specifications & Care"
+          >
+            Spesifikasi & Perawatan
+          </h2>
+          <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+            <!-- Kolom Kiri: Material (Statis) -->
+            <div
+              class="bg-mono-surface/50 p-6 rounded-lg border border-mono-border/30"
+            >
+              <h3
+                class="text-xl font-bold text-mono-accent mb-3"
+                data-lang-id="Material & Kualitas"
+                data-lang-en="Material & Quality"
+              >
+                Material & Kualitas
+              </h3>
+              <ul class="space-y-3 text-mono-text">
+                <li>
+                  <strong
+                    class="text-mono-accent"
+                    data-lang-id="Kain Luar:"
+                    data-lang-en="Outer Fabric:"
+                    >Kain Luar:</strong
+                  >
+                  <span
+                    data-lang-id="Umumnya menggunakan kain velboa atau sejenisnya yang sangat lembut dan sedikit berbulu pendek."
+                    data-lang-en="Typically uses very soft, short-piled velboa fabric or similar materials."
+                    >Umumnya menggunakan kain velboa atau sejenisnya yang sangat
+                    lembut dan sedikit berbulu pendek.</span
+                  >
+                </li>
+                <li>
+                  <strong
+                    class="text-mono-accent"
+                    data-lang-id="Isian:"
+                    data-lang-en="Filling:"
+                    >Isian:</strong
+                  >
+                  <span
+                    data-lang-id="Polyester fiberfill (dakron) berkualitas tinggi yang membuatnya empuk dan tahan lama."
+                    data-lang-en="High-quality polyester fiberfill that makes it plush and durable."
+                    >Polyester fiberfill (dakron) berkualitas tinggi yang
+                    membuatnya empuk dan tahan lama.</span
+                  >
+                </li>
+                <li>
+                  <strong
+                    class="text-mono-accent"
+                    data-lang-id="Detail:"
+                    data-lang-en="Details:"
+                    >Detail:</strong
+                  >
+                  <span
+                    data-lang-id="Wajah dan detail lainnya dibuat dengan bordiran komputer presisi tinggi."
+                    data-lang-en="The face and other details are made with high-precision computer embroidery."
+                    >Wajah dan detail lainnya dibuat dengan bordiran komputer
+                    presisi tinggi.</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Kolom Kanan: Perawatan (Interaktif) -->
+            <div
+              class="bg-mono-surface/50 p-6 rounded-lg border border-mono-border/30"
+            >
+              <h3
+                class="text-xl font-bold text-mono-accent mb-4"
+                data-lang-id="Protokol Perawatan Interaktif"
+                data-lang-en="Interactive Care Protocol"
+              >
+                Protokol Perawatan Interaktif
+              </h3>
+
+              <!-- Tombol Pilihan -->
+              <div id="care-buttons" class="grid grid-cols-2 gap-2 mb-4">
+                <button
+                  data-target="care-spot"
+                  class="care-button"
+                  data-lang-id="Pembersihan Noda"
+                  data-lang-en="Spot Cleaning"
+                >
+                  Pembersihan Noda
+                </button>
+                <button
+                  data-target="care-wash"
+                  class="care-button"
+                  data-lang-id="Cuci Tangan"
+                  data-lang-en="Hand Wash"
+                >
+                  Cuci Tangan
+                </button>
+                <button
+                  data-target="care-dry"
+                  class="care-button"
+                  data-lang-id="Pengeringan"
+                  data-lang-en="Drying"
+                >
+                  Pengeringan
+                </button>
+                <button
+                  data-target="care-tips"
+                  class="care-button"
+                  data-lang-id="Tips Umum"
+                  data-lang-en="General Tips"
+                >
+                  Tips Umum
+                </button>
+              </div>
+
+              <!-- Panel Konten -->
+              <div
+                id="care-content"
+                class="relative min-h-[180px] bg-black/20 p-4 rounded-md border border-mono-border/50"
+              >
+                <!-- Konten Pembersihan Noda -->
+                <div
+                  id="care-spot"
+                  class="care-panel absolute inset-0 transition-opacity duration-300"
+                >
+                  <ol class="list-decimal list-inside space-y-2 text-mono-text">
+                    <li
+                      data-lang-id="Campurkan sedikit sabun lembut dengan air hangat."
+                      data-lang-en="Mix a small amount of mild soap with warm water."
+                    >
+                      Campurkan sedikit sabun lembut dengan air hangat.
+                    </li>
+                    <li
+                      data-lang-id="Gunakan kain bersih untuk mengaplikasikan larutan sabun ke noda secara perlahan."
+                      data-lang-en="Use a clean cloth to gently apply the soap solution to the stain."
+                    >
+                      Gunakan kain bersih untuk mengaplikasikan larutan sabun ke
+                      noda secara perlahan.
+                    </li>
+                    <li
+                      data-lang-id="Seka sisa sabun dengan kain lembab yang bersih."
+                      data-lang-en="Wipe away the soap residue with a clean, damp cloth."
+                    >
+                      Seka sisa sabun dengan kain lembab yang bersih.
+                    </li>
+                  </ol>
+                </div>
+                <!-- Konten Cuci Tangan -->
+                <div
+                  id="care-wash"
+                  class="care-panel absolute inset-0 transition-opacity duration-300"
+                >
+                  <p
+                    class="text-sm text-yellow-400/80 mb-2"
+                    data-lang-id="PERINGATAN: Lakukan hanya jika sangat diperlukan."
+                    data-lang-en="WARNING: Perform only when absolutely necessary."
+                  >
+                    PERINGATAN: Lakukan hanya jika sangat diperlukan.
+                  </p>
+                  <ol class="list-decimal list-inside space-y-2 text-mono-text">
+                    <li
+                      data-lang-id="Isi baskom dengan air dingin dan sedikit deterjen lembut."
+                      data-lang-en="Fill a basin with cold water and a small amount of gentle detergent."
+                    >
+                      Isi baskom dengan air dingin dan sedikit deterjen lembut.
+                    </li>
+                    <li
+                      data-lang-id="Rendam dan tekan-tekan Nesoberi dengan lembut. Jangan diperas atau dipelintir."
+                      data-lang-en="Submerge and gently squeeze the Nesoberi. Do not wring or twist."
+                    >
+                      Rendam dan tekan-tekan Nesoberi dengan lembut. Jangan
+                      diperas atau dipelintir.
+                    </li>
+                    <li
+                      data-lang-id="Bilas hingga bersih dengan air dingin."
+                      data-lang-en="Rinse thoroughly with cold water until clear."
+                    >
+                      Bilas hingga bersih dengan air dingin.
+                    </li>
+                  </ol>
+                </div>
+                <!-- Konten Pengeringan -->
+                <div
+                  id="care-dry"
+                  class="care-panel absolute inset-0 transition-opacity duration-300"
+                >
+                  <ol class="list-decimal list-inside space-y-2 text-mono-text">
+                    <li
+                      data-lang-id="Gunakan handuk untuk menekan sisa air dengan lembut."
+                      data-lang-en="Gently press out excess water with a towel."
+                    >
+                      Gunakan handuk untuk menekan sisa air dengan lembut.
+                    </li>
+                    <li
+                      data-lang-id="Letakkan di tempat yang berventilasi baik dan jauh dari sinar matahari langsung."
+                      data-lang-en="Place it in a well-ventilated area away from direct sunlight."
+                    >
+                      Letakkan di tempat yang berventilasi baik dan jauh dari
+                      sinar matahari langsung.
+                    </li>
+                    <li
+                      data-lang-id="Jangan pernah menggunakan mesin pengering (hair dryer/dryer machine)."
+                      data-lang-en="Never use a machine dryer or hair dryer."
+                    >
+                      Jangan pernah menggunakan mesin pengering (hair
+                      dryer/dryer machine).
+                    </li>
+                  </ol>
+                </div>
+                <!-- Konten Tips Umum -->
+                <div
+                  id="care-tips"
+                  class="care-panel absolute inset-0 transition-opacity duration-300"
+                >
+                  <ul class="list-disc list-inside space-y-2 text-mono-text">
+                    <li
+                      data-lang-id="Jauhkan dari hewan peliharaan untuk menghindari kerusakan."
+                      data-lang-en="Keep away from pets to avoid damage."
+                    >
+                      Jauhkan dari hewan peliharaan untuk menghindari kerusakan.
+                    </li>
+                    <li
+                      data-lang-id="Gunakan sikat pakaian yang lembut untuk merapikan bulu jika perlu."
+                      data-lang-en="Use a soft clothing brush to groom the fabric if needed."
+                    >
+                      Gunakan sikat pakaian yang lembut untuk merapikan bulu
+                      jika perlu.
+                    </li>
+                    <li
+                      data-lang-id="Simpan di tempat yang tidak lembab untuk mencegah jamur."
+                      data-lang-en="Store in a non-humid place to prevent mold."
+                    >
+                      Simpan di tempat yang tidak lembab untuk mencegah jamur.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Harga & Tempat Beli -->
+        <section id="akuisisi" class="content-section opacity-0">
+          <h2
+            class="text-3xl md:text-4xl font-bold mb-8 text-center bg-gradient-to-r from-mono-accent to-gray-400 text-transparent bg-clip-text"
+            data-lang-id="Akuisisi & Protokol Harga"
+            data-lang-en="Acquisition & Price Protocol"
+          >
+            Akuisisi & Protokol Harga
+          </h2>
+          <div
+            class="max-w-4xl mx-auto bg-mono-surface/50 backdrop-blur-sm p-6 rounded-lg border border-mono-border/30"
+          >
+            <h3
+              class="text-xl font-bold text-mono-accent mb-3"
+              data-lang-id="Estimasi Kisaran Harga"
+              data-lang-en="Estimated Price Range"
+            >
+              Estimasi Kisaran Harga
+            </h3>
+            <p
+              class="text-sm text-mono-subtle mb-4"
+              data-lang-id="Harga dapat bervariasi tergantung kelangkaan, karakter, dan kondisi. Harga berikut adalah untuk unit baru/bekas dalam kondisi baik."
+              data-lang-en="Prices can vary based on rarity, character, and condition. The following prices are for new/mint condition units."
+            >
+              Harga dapat bervariasi tergantung kelangkaan, karakter, dan
+              kondisi. Harga berikut adalah untuk unit baru/bekas dalam kondisi
+              baik.
+            </p>
+            <ul class="space-y-2 mb-6">
+              <li><strong>Keychain:</strong> $10 - $25 USD</li>
+              <li><strong>Standard (40cm):</strong> $25 - $50 USD</li>
+              <li><strong>Mega Jumbo (50cm):</strong> $40 - $70 USD</li>
+              <li><strong>Tera Jumbo (1m):</strong> $150 - $300+ USD</li>
+            </ul>
+            <h3
+              class="text-xl font-bold text-mono-accent mb-3"
+              data-lang-id="Sumber Akuisisi Terpercaya"
+              data-lang-en="Trusted Acquisition Sources"
+            >
+              Sumber Akuisisi Terpercaya
+            </h3>
+            <ul class="list-disc list-inside text-mono-text">
+              <li>
+                <a
+                  href="https://www.amiami.com/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-mono-accent/80 hover:underline"
+                  >AmiAmi</a
+                >
+                <span
+                  class="text-mono-subtle text-sm"
+                  data-lang-id="(Baru & Pre-order)"
+                  data-lang-en="(New & Pre-orders)"
+                  >(Baru & Pre-order)</span
+                >
+              </li>
+              <li>
+                <a
+                  href="https://order.mandarake.co.jp/order/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-mono-accent/80 hover:underline"
+                  >Mandarake</a
+                >
+                <span
+                  class="text-mono-subtle text-sm"
+                  data-lang-id="(Bekas & Langka)"
+                  data-lang-en="(Second-hand & Rare)"
+                  >(Bekas & Langka)</span
+                >
+              </li>
+              <li>
+                <a
+                  href="https://buyee.jp/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-mono-accent/80 hover:underline"
+                  >Buyee</a
+                >
+                /
+                <a
+                  href="https://zenmarket.jp/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-mono-accent/80 hover:underline"
+                  >ZenMarket</a
+                >
+                <span
+                  class="text-mono-subtle text-sm"
+                  data-lang-id="(Jasa Perantara dari Jepang)"
+                  data-lang-en="(Proxy Services from Japan)"
+                  >(Jasa Perantara dari Jepang)</span
+                >
+              </li>
+              <li>
+                <span
+                  data-lang-id="Grup komunitas & marketplace lokal."
+                  data-lang-en="Local community groups & marketplaces."
+                  >Grup komunitas & marketplace lokal.</span
+                >
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Galeri -->
+        <section id="galeri" class="content-section opacity-0">
+          <h2
+            class="text-3xl md:text-4xl font-bold mb-8 text-center bg-gradient-to-r from-mono-accent to-gray-400 text-transparent bg-clip-text"
+            data-lang-id="Galeri Unit"
+            data-lang-en="Unit Gallery"
+          >
+            Galeri Unit
+          </h2>
+          <div
+            class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+          >
+            <div class="group relative">
+              <img
+                src="https://placehold.co/500x500/18181b/ffffff?text=Close-Up"
+                alt="Gallery Image 1"
+                class="rounded-lg w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4"
+              >
+                <p
+                  class="text-white text-sm"
+                  data-lang-id="Detail bordiran wajah."
+                  data-lang-en="Close-up of face embroidery."
+                >
+                  Detail bordiran wajah.
+                </p>
+              </div>
+            </div>
+            <div class="group relative">
+              <img
+                src="https://placehold.co/500x500/18181b/ffffff?text=Pose+Lucu"
+                alt="Gallery Image 2"
+                class="rounded-lg w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4"
+              >
+                <p
+                  class="text-white text-sm"
+                  data-lang-id="Nesoberi ditumpuk."
+                  data-lang-en="A stack of Nesoberi."
+                >
+                  Nesoberi ditumpuk.
+                </p>
+              </div>
+            </div>
+            <div class="group relative">
+              <img
+                src="https://placehold.co/500x500/18181b/ffffff?text=Koleksi"
+                alt="Gallery Image 3"
+                class="rounded-lg w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4"
+              >
+                <p
+                  class="text-white text-sm"
+                  data-lang-id="Koleksi pribadi di rak."
+                  data-lang-en="Personal collection on a shelf."
+                >
+                  Koleksi pribadi di rak.
+                </p>
+              </div>
+            </div>
+            <div class="group relative">
+              <img
+                src="https://placehold.co/500x500/18181b/ffffff?text=Perbandingan+Ukuran"
+                alt="Gallery Image 4"
+                class="rounded-lg w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4"
+              >
+                <p
+                  class="text-white text-sm"
+                  data-lang-id="Semua ukuran berjajar."
+                  data-lang-en="All sizes lined up."
+                >
+                  Semua ukuran berjajar.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="content-section opacity-0">
+          <h2
+            class="text-3xl md:text-4xl font-bold mb-8 text-center bg-gradient-to-r from-mono-accent to-gray-400 text-transparent bg-clip-text"
+            data-lang-id="Pencarian Database"
+            data-lang-en="Database Query"
+          >
+            Pencarian Database
+          </h2>
+          <div class="space-y-4 max-w-2xl mx-auto">
+            <details
+              class="group bg-mono-surface/50 backdrop-blur-sm p-4 rounded-lg border border-mono-border/30"
+            >
+              <summary
+                class="flex justify-between items-center cursor-pointer list-none"
+              >
+                <span
+                  class="font-semibold"
+                  data-lang-id="Verifikasi produsen?"
+                  data-lang-en="Verify manufacturer?"
+                  >Verifikasi produsen?</span
+                ><span
+                  class="text-mono-subtle transform transition-transform duration-300 group-open:rotate-45 font-mono text-2xl"
+                  >+</span
+                >
+              </summary>
+              <p
+                class="mt-3 text-mono-text"
+                data-lang-id="Semua unit Nesoberi asli diindeks sebagai produksi SEGA Prize. Periksa tag untuk logo SEGA."
+                data-lang-en="All authentic Nesoberi units are indexed as SEGA Prize productions. Check the tags for the SEGA logo."
+              >
+                Semua unit Nesoberi asli diindeks sebagai produksi SEGA Prize.
+                Periksa tag untuk logo SEGA.
+              </p>
+            </details>
+            <details
+              class="group bg-mono-surface/50 backdrop-blur-sm p-4 rounded-lg border border-mono-border/30"
+            >
+              <summary
+                class="flex justify-between items-center cursor-pointer list-none"
+              >
+                <span
+                  class="font-semibold"
+                  data-lang-id="Apakah Nesoberi bisa dicuci dengan mesin?"
+                  data-lang-en="Can Nesoberi be machine washed?"
+                  >Apakah Nesoberi bisa dicuci dengan mesin?</span
+                ><span
+                  class="text-mono-subtle transform transition-transform duration-300 group-open:rotate-45 font-mono text-2xl"
+                  >+</span
+                >
+              </summary>
+              <p
+                class="mt-3 text-mono-text"
+                data-lang-id="Sangat tidak disarankan karena berisiko merusak bentuk, kain, dan bordiran. Metode pembersihan noda lokal (spot cleaning) adalah yang paling aman. Lihat bagian Perawatan untuk detail."
+                data-lang-en="It is highly discouraged as it risks damaging the shape, fabric, and embroidery. Spot cleaning is the safest method. Refer to the Care section for details."
+              >
+                Sangat tidak disarankan karena berisiko merusak bentuk, kain,
+                dan bordiran. Metode pembersihan noda lokal (spot cleaning)
+                adalah yang paling aman. Lihat bagian Perawatan untuk detail.
+              </p>
+            </details>
+            <details
+              class="group bg-mono-surface/50 backdrop-blur-sm p-4 rounded-lg border border-mono-border/30"
+            >
+              <summary
+                class="flex justify-between items-center cursor-pointer list-none"
+              >
+                <span
+                  class="font-semibold"
+                  data-lang-id="Seberapa besar ukuran Mega Jumbo dibanding manusia?"
+                  data-lang-en="How big is a Mega Jumbo compared to a human?"
+                  >Seberapa besar ukuran Mega Jumbo dibanding manusia?</span
+                ><span
+                  class="text-mono-subtle transform transition-transform duration-300 group-open:rotate-45 font-mono text-2xl"
+                  >+</span
+                >
+              </summary>
+              <p
+                class="mt-3 text-mono-text"
+                data-lang-id="Ukuran Mega Jumbo memiliki panjang sekitar 50 cm. Saat dipeluk, ukurannya kira-kira selebar torso orang dewasa, membuatnya sangat ideal untuk dipeluk."
+                data-lang-en="A Mega Jumbo Nesoberi is approximately 50cm long. When held, it's roughly the width of an adult's torso, making it perfectly huggable."
+              >
+                Ukuran Mega Jumbo memiliki panjang sekitar 50 cm. Saat dipeluk,
+                ukurannya kira-kira selebar torso orang dewasa, membuatnya
+                sangat ideal untuk dipeluk.
+              </p>
+            </details>
+            <details
+              class="group bg-mono-surface/50 backdrop-blur-sm p-4 rounded-lg border border-mono-border/30"
+            >
+              <summary
+                class="flex justify-between items-center cursor-pointer list-none"
+              >
+                <span
+                  class="font-semibold"
+                  data-lang-id="Apa arti dari 'Nesoberi'?"
+                  data-lang-en="What does 'Nesoberi' mean?"
+                  >Apa arti dari 'Nesoberi'?</span
+                ><span
+                  class="text-mono-subtle transform transition-transform duration-300 group-open:rotate-45 font-mono text-2xl"
+                  >+</span
+                >
+              </summary>
+              <p
+                class="mt-3 text-mono-text"
+                data-lang-id="Secara harfiah, 'Nesoberi' (寝そべり) dalam bahasa Jepang berarti 'berbaring tengkurap' atau 'rebahan'. Nama ini secara sempurna mendeskripsikan pose khas dari boneka ini."
+                data-lang-en="Literally, 'Nesoberi' (寝そべり) in Japanese means 'to lie down on one's stomach' or 'to sprawl'. The name perfectly describes the plushie's signature pose."
+              >
+                Secara harfiah, 'Nesoberi' (寝そべり) dalam bahasa Jepang
+                berarti 'berbaring tengkurap' atau 'rebahan'. Nama ini secara
+                sempurna mendeskripsikan pose khas dari boneka ini.
+              </p>
+            </details>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer
+      class="bg-black text-center py-8 px-4 text-mono-subtle text-xs border-t border-mono-border/20"
+    >
+      <h3
+        class="font-bold text-base mb-4 text-mono-text"
+        data-lang-id="Metadata & Atribusi"
+        data-lang-en="Metadata & Attributions"
+      >
+        Metadata & Atribusi
+      </h3>
+      <div class="space-y-2">
+        <p>
+          <strong>Fonts:</strong>
+          <a
+            href="https://fonts.google.com/specimen/Poppins"
+            target="_blank"
+            rel="noopener"
+            class="text-mono-accent/70 hover:underline"
+            >Poppins</a
+          >
+          (OFL).
+        </p>
+        <p>
+          <strong>Framework:</strong>
+          <a
+            href="https://tailwindcss.com/"
+            target="_blank"
+            rel="noopener"
+            class="text-mono-accent/70 hover:underline"
+            >Tailwind CSS</a
+          >
+          (MIT).
+        </p>
+      </div>
+      <p
+        class="mt-6"
+        data-lang-id="Antarmuka ini dioptimalkan oleh kecerdasan artifisial."
+        data-lang-en="This interface was optimized by artificial intelligence."
+      >
+        Antarmuka ini dioptimalkan oleh kecerdasan artifisial.
+      </p>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
